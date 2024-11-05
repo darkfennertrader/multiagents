@@ -168,14 +168,13 @@ builder.add_edge("research_critique", "generate")
 
 app = builder.compile(checkpointer=memory)
 
-
 display(Image(app.get_graph().draw_mermaid_png(output_file_path="reflexion_2.png")))  # type: ignore
 
 # %%
 
 if __name__ == "__main__":
     config = {"configurable": {"thread_id": "1"}}
-    task = "Use of artificial intelligence."
+    task = "How to structure a report for feedback after a course on soft skills."
     input = {"task": task, "revision_number": 1, "max_revisions": 3}
 
     start = time()
